@@ -81,4 +81,34 @@ public class MySql {
         }
     }
     
+    public int cadastraUsuario(String SQL){
+        int status = 0;
+        try {
+            //createStatement de con para criar o Statement
+            this.setStatement(getConn().createStatement());            
+
+            // Definido o Statement, executamos a query no banco de dados
+            this.getStatement().executeUpdate(SQL);            
+        
+            return status;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return status;
+        }
+    }
+    
+    public void executarSQL(String sql) {
+        try {
+            this.statement = conn.createStatement(
+                    ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            this.resultSet = this.statement.executeQuery(sql);
+
+//            while (this.getResultSet().next()) {
+//                System.out.println(this.getResultSet().getInt(1));
+//            }
+        } catch (SQLException sqlex) {
+            sqlex.printStackTrace();
+        }
+    }
+    
 }
