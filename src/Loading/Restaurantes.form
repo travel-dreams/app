@@ -135,8 +135,8 @@
                           <Component id="imgProd1" alignment="0" pref="213" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="nomeProd1" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
-                                  <Component id="precoProd1" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="nomeProdRes1" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
+                                  <Component id="precoProdRes1" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
@@ -152,9 +152,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="imgProd1" min="-2" pref="194" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="nomeProd1" min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="nomeProdRes1" min="-2" pref="46" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="precoProd1" min="-2" max="-2" attributes="0"/>
+                      <Component id="precoProdRes1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="jButton12" pref="37" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -173,7 +173,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="imgProd1ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="nomeProd1">
+            <Component class="javax.swing.JLabel" name="nomeProdRes1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="18" style="1"/>
@@ -184,7 +184,7 @@
                 <Property name="text" type="java.lang.String" value="Nome do Produto"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="precoProd1">
+            <Component class="javax.swing.JLabel" name="precoProdRes1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="18" style="0"/>
@@ -231,8 +231,8 @@
                           <Component id="imgProd2" alignment="0" pref="213" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="nomeProd2" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
-                                  <Component id="precoProd2" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="nomeProdRes2" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
+                                  <Component id="precoProdRes2" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
@@ -248,9 +248,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="imgProd2" min="-2" pref="194" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="nomeProd2" min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="nomeProdRes2" min="-2" pref="46" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="precoProd2" min="-2" max="-2" attributes="0"/>
+                      <Component id="precoProdRes2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="jButton10" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -269,7 +269,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="imgProd2ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="nomeProd2">
+            <Component class="javax.swing.JLabel" name="nomeProdRes2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="18" style="1"/>
@@ -280,7 +280,7 @@
                 <Property name="text" type="java.lang.String" value="Nome do Produto"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="precoProd2">
+            <Component class="javax.swing.JLabel" name="precoProdRes2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="18" style="0"/>
@@ -327,7 +327,7 @@
                           <Component id="imgProd3" alignment="0" pref="213" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="nomeProd3" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
+                                  <Component id="nomeProdRes3" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
                                   <Component id="precoProd3" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -344,7 +344,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="imgProd3" min="-2" pref="194" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="nomeProd3" min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="nomeProdRes3" min="-2" pref="46" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="precoProd3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
@@ -365,7 +365,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="imgProd3ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="nomeProd3">
+            <Component class="javax.swing.JLabel" name="nomeProdRes3">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="18" style="1"/>

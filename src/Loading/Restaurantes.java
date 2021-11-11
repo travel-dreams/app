@@ -2,6 +2,8 @@
 package Loading;
 import objetos.Produtos;
 import conexoes.MySql;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 public class Restaurantes extends javax.swing.JFrame {
 
@@ -9,9 +11,33 @@ public class Restaurantes extends javax.swing.JFrame {
     
     public Restaurantes() {
         initComponents();
-        String[][] resultado = this.P.pegaProdutos(4);
-       System.out.println(resultado[1][1]);
+        String nome1 = this.P.pegaNome(4, "nome",1);
+        nomeProdRes1.setText(nome1);
         
+        String nome2 = this.P.pegaNome(4, "nome",2);
+        nomeProdRes2.setText(nome2);
+        
+        String nome3 = this.P.pegaNome(4, "nome",3);
+        nomeProdRes3.setText(nome3);
+    
+        String preco1 = this.P.pegaNome(4, "preco",1);
+        precoProdRes1.setText(preco1);
+        
+        String preco2 = this.P.pegaNome(4, "preco",2);
+        precoProdRes2.setText(preco2);
+        
+        String preco3 = this.P.pegaNome(4, "preco",3);
+        precoProd3.setText(preco3);
+    
+        String img1 = this.P.pegaNome(4, "imagem",1);
+        imgProd1.setIcon(new ImageIcon("/Loading.imgs/" + img1));
+        
+       // String img2 = this.P.pegaNome(4, "imagem",2);
+       // imgProd2.setIcon(new ImageIcon(img2));
+        
+       // String img3 = this.P.pegaNome(4, "imagem",3);
+       // imgProd3.setIcon(new ImageIcon(img3));
+    
     }
 
 
@@ -24,17 +50,17 @@ public class Restaurantes extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         imgProd1 = new javax.swing.JButton();
-        nomeProd1 = new javax.swing.JLabel();
-        precoProd1 = new javax.swing.JLabel();
+        nomeProdRes1 = new javax.swing.JLabel();
+        precoProdRes1 = new javax.swing.JLabel();
         jButton12 = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         imgProd2 = new javax.swing.JButton();
-        nomeProd2 = new javax.swing.JLabel();
-        precoProd2 = new javax.swing.JLabel();
+        nomeProdRes2 = new javax.swing.JLabel();
+        precoProdRes2 = new javax.swing.JLabel();
         jButton10 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         imgProd3 = new javax.swing.JButton();
-        nomeProd3 = new javax.swing.JLabel();
+        nomeProdRes3 = new javax.swing.JLabel();
         precoProd3 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
 
@@ -67,13 +93,13 @@ public class Restaurantes extends javax.swing.JFrame {
             }
         });
 
-        nomeProd1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        nomeProd1.setForeground(new java.awt.Color(255, 255, 255));
-        nomeProd1.setText("Nome do Produto");
+        nomeProdRes1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        nomeProdRes1.setForeground(new java.awt.Color(255, 255, 255));
+        nomeProdRes1.setText("Nome do Produto");
 
-        precoProd1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        precoProd1.setForeground(new java.awt.Color(255, 255, 255));
-        precoProd1.setText("R$00,00");
+        precoProdRes1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        precoProdRes1.setForeground(new java.awt.Color(255, 255, 255));
+        precoProdRes1.setText("R$00,00");
 
         jButton12.setText("Adicionar ao Carrinho");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -92,8 +118,8 @@ public class Restaurantes extends javax.swing.JFrame {
                     .addComponent(imgProd1, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeProd1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(precoProd1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nomeProdRes1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(precoProdRes1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jButton12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -104,9 +130,9 @@ public class Restaurantes extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(imgProd1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeProd1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nomeProdRes1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(precoProd1)
+                .addComponent(precoProdRes1)
                 .addGap(18, 18, 18)
                 .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
                 .addContainerGap())
@@ -123,13 +149,13 @@ public class Restaurantes extends javax.swing.JFrame {
             }
         });
 
-        nomeProd2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        nomeProd2.setForeground(new java.awt.Color(255, 255, 255));
-        nomeProd2.setText("Nome do Produto");
+        nomeProdRes2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        nomeProdRes2.setForeground(new java.awt.Color(255, 255, 255));
+        nomeProdRes2.setText("Nome do Produto");
 
-        precoProd2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        precoProd2.setForeground(new java.awt.Color(255, 255, 255));
-        precoProd2.setText("R$00,00");
+        precoProdRes2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        precoProdRes2.setForeground(new java.awt.Color(255, 255, 255));
+        precoProdRes2.setText("R$00,00");
 
         jButton10.setText("Adicionar ao Carrinho");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -148,8 +174,8 @@ public class Restaurantes extends javax.swing.JFrame {
                     .addComponent(imgProd2, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeProd2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(precoProd2, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nomeProdRes2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(precoProdRes2, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jButton10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -160,9 +186,9 @@ public class Restaurantes extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(imgProd2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeProd2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nomeProdRes2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(precoProd2)
+                .addComponent(precoProdRes2)
                 .addGap(18, 18, 18)
                 .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -179,9 +205,9 @@ public class Restaurantes extends javax.swing.JFrame {
             }
         });
 
-        nomeProd3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        nomeProd3.setForeground(new java.awt.Color(255, 255, 255));
-        nomeProd3.setText("Nome do Produto");
+        nomeProdRes3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        nomeProdRes3.setForeground(new java.awt.Color(255, 255, 255));
+        nomeProdRes3.setText("Nome do Produto");
 
         precoProd3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         precoProd3.setForeground(new java.awt.Color(255, 255, 255));
@@ -204,7 +230,7 @@ public class Restaurantes extends javax.swing.JFrame {
                     .addComponent(imgProd3, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeProd3, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nomeProdRes3, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(precoProd3, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -216,7 +242,7 @@ public class Restaurantes extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(imgProd3, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeProd3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nomeProdRes3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(precoProd3)
                 .addGap(18, 18, 18)
@@ -350,11 +376,11 @@ public class Restaurantes extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JLabel nomeProd1;
-    private javax.swing.JLabel nomeProd2;
-    private javax.swing.JLabel nomeProd3;
-    private javax.swing.JLabel precoProd1;
-    private javax.swing.JLabel precoProd2;
+    private javax.swing.JLabel nomeProdRes1;
+    private javax.swing.JLabel nomeProdRes2;
+    private javax.swing.JLabel nomeProdRes3;
     private javax.swing.JLabel precoProd3;
+    private javax.swing.JLabel precoProdRes1;
+    private javax.swing.JLabel precoProdRes2;
     // End of variables declaration//GEN-END:variables
 }
