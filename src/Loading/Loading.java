@@ -20,7 +20,7 @@ public class Loading extends javax.swing.JFrame {
                         dispose();
                     }
                     try{
-                        sleep(50);
+                        sleep(10);
                     }
                     catch(InterruptedException ex){
                         
