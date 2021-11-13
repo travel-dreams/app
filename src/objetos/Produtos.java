@@ -20,7 +20,7 @@ public class Produtos {
         String retorno2 = null;
         String retorno3 = null;
         String retorno = null;
-                try {
+        try {
             this.conectar.executarSQL("select " + campo + " from produtos join categoria on produtos.id_categoria = categoria.id_categoria where categoria.id_categoria = " + valor + ";");
             
             while(this.conectar.getResultSet().next()){    
@@ -56,10 +56,32 @@ public class Produtos {
         }  
          System.out.print(retorno);
         return retorno;
+    }
     
-    
-}
-    
+    public String pegaParaCarrinho(String campo, String id ){
+        this.conectar.conectaBanco();
+        
+        String retornoCarrinho = null;
+        try {
+            this.conectar.executarSQL("select " + campo + " from produtos where id = " + id);
+            
+            while(this.conectar.getResultSet().next()){    
+                
+                retornoCarrinho = this.conectar.getResultSet().getString(1);  
+         
+            }    
+            
+          
+        } catch (Exception e) {            
+            System.out.println("Erro ao buscar produto " +  e.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro ao buscar produto");
+            
+        }finally{
+           this.conectar.fechaBanco();  
+        }  
+         System.out.print(retornoCarrinho);
+        return retornoCarrinho;
+    }
  
 }
 

@@ -17,7 +17,7 @@ public class MySql {
     private String servidor = "localhost:3306";
     private String nomeDoBanco = "travel_dreams";
     private String usuario = "root";
-    private String senha = "57037313Xx";
+    private String senha = "root";
     
     //Construtor    
     public MySql(){
@@ -82,6 +82,22 @@ public class MySql {
     }
     
     public int cadastraUsuario(String SQL){
+        int status = 0;
+        try {
+            //createStatement de con para criar o Statement
+            this.setStatement(getConn().createStatement());            
+
+            // Definido o Statement, executamos a query no banco de dados
+            this.getStatement().executeUpdate(SQL);            
+        
+            return status;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return status;
+        }
+    }
+    
+    public int cadastraCarrinho(String SQL){
         int status = 0;
         try {
             //createStatement de con para criar o Statement

@@ -1,6 +1,7 @@
 
 package Loading;
 import objetos.Produtos;
+import objetos.CarrinhoCadastra;
 import conexoes.MySql;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -8,6 +9,7 @@ import javax.swing.JLabel;
 public class Restaurantes extends javax.swing.JFrame {
 
     Produtos P = new Produtos();
+    CarrinhoCadastra C = new CarrinhoCadastra();
     
     public Restaurantes() {
         initComponents();
@@ -30,7 +32,8 @@ public class Restaurantes extends javax.swing.JFrame {
         precoProd3.setText(preco3);
     
         String img1 = this.P.pegaNome(4, "imagem",1);
-        imgProd1.setIcon(new ImageIcon("/Loading.imgs/" + img1));
+        System.out.print(img1);
+        imgProd1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Loading/" + img1 )));
         
        // String img2 = this.P.pegaNome(4, "imagem",2);
        // imgProd2.setIcon(new ImageIcon(img2));
@@ -303,7 +306,8 @@ public class Restaurantes extends javax.swing.JFrame {
     }//GEN-LAST:event_imgProd1ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
+        // Insere produto 1 no carrinho
+        C.insereCarrinho(P.pegaNome(4, "id", 1));
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void imgProd2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imgProd2ActionPerformed
@@ -311,7 +315,8 @@ public class Restaurantes extends javax.swing.JFrame {
     }//GEN-LAST:event_imgProd2ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+        // Insere produto 1 no carrinho
+        C.insereCarrinho(P.pegaNome(4, "id", 2));
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void imgProd3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imgProd3ActionPerformed
@@ -319,7 +324,7 @@ public class Restaurantes extends javax.swing.JFrame {
     }//GEN-LAST:event_imgProd3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        C.insereCarrinho(P.pegaNome(4, "id", 3));
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
