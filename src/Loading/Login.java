@@ -272,6 +272,7 @@ public class Login extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void campoCpfLoginFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoCpfLoginFocusGained

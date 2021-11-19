@@ -7,7 +7,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -48,19 +48,20 @@
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="351" max="-2" attributes="0"/>
+                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="403" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="288" max="-2" attributes="0"/>
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="34" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -132,8 +133,8 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton12" alignment="1" max="32767" attributes="0"/>
-                          <Component id="nomeProdTrans1" pref="202" max="32767" attributes="0"/>
+                          <Component id="buttonTransporte1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="nomeProdTrans1" pref="248" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="precoProdTrans1" min="-2" pref="149" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -154,7 +155,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="precoProdTrans1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="jButton12" pref="37" max="32767" attributes="0"/>
+                      <Component id="buttonTransporte1" pref="37" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -193,12 +194,12 @@
                 <Property name="text" type="java.lang.String" value="R$00,00"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton12">
+            <Component class="javax.swing.JButton" name="buttonTransporte1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Adicionar ao Carrinho"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonTransporte1ActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -226,15 +227,13 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton10" alignment="1" max="32767" attributes="0"/>
-                          <Component id="nomeProdTrans2" max="32767" attributes="0"/>
+                          <Component id="buttonTransporte2" alignment="1" max="32767" attributes="0"/>
+                          <Component id="nomeProdTrans2" pref="248" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="precoProdTrans2" min="-2" pref="149" max="-2" attributes="0"/>
-                                  <Component id="imgProd2" min="-2" pref="202" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="precoProdTrans2" min="-2" pref="149" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
+                          <Component id="imgProd2" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -250,7 +249,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="precoProdTrans2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="jButton10" max="32767" attributes="0"/>
+                      <Component id="buttonTransporte2" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -289,12 +288,12 @@
                 <Property name="text" type="java.lang.String" value="R$00,00"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton10">
+            <Component class="javax.swing.JButton" name="buttonTransporte2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Adicionar ao Carrinho"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton10ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonTransporte2ActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -322,15 +321,13 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton2" alignment="1" max="32767" attributes="0"/>
-                          <Component id="nomeProdTrans3" max="32767" attributes="0"/>
+                          <Component id="buttonTransporte3" alignment="1" max="32767" attributes="0"/>
+                          <Component id="nomeProdTrans3" pref="248" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="precoProdTrans3" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                  <Component id="imgProd3" alignment="0" min="-2" pref="202" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="precoProdTrans3" min="-2" pref="149" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
+                          <Component id="imgProd3" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -346,7 +343,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="precoProdTrans3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="jButton2" max="32767" attributes="0"/>
+                      <Component id="buttonTransporte3" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -385,12 +382,12 @@
                 <Property name="text" type="java.lang.String" value="R$00,00"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="buttonTransporte3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Adicionar ao Carrinho"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonTransporte3ActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

@@ -41,7 +41,7 @@ public class Home extends javax.swing.JFrame {
 
         jTextField1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(204, 204, 204));
-        jTextField1.setText("O que você procura?");
+        jTextField1.setToolTipText("");
         jTextField1.setBorder(null);
 
         goToCart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Loading/imgs/Vector (2).png"))); // NOI18N
@@ -226,6 +226,7 @@ public class Home extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     
