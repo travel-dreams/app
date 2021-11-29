@@ -14,25 +14,32 @@ public class Login extends javax.swing.JFrame {
     
     public void verificaLogin(){
         this.conectar.conectaBanco();
-        String cpfDigitado = campoCpfLogin.getText();
+        String usuarioDigitado = campoUsuarioLogin.getText();
         String senhaDigitado = campoSenhaLogin.getText();
+        
+        if(senhaDigitado.equals("admin123") && usuarioDigitado.equals("admin")){
+                    CadastroProduto cadastroproduto = new CadastroProduto();
+                    cadastroproduto.setVisible(true);
+                    dispose();
+            } else {
                 
         try {
-            this.conectar.executarSQL("select cpf, senha from usuario where cpf = '" + cpfDigitado + "'");
+            this.conectar.executarSQL("select usuario, senha from usuario where cpf = '" + usuarioDigitado + "'");
             
             while(this.conectar.getResultSet().next()){    
-                String cpfBanco = this.conectar.getResultSet().getString(1);
+                String usuarioBanco = this.conectar.getResultSet().getString(1);
                 String senhaBanco = this.conectar.getResultSet().getString(2);
-                System.out.println(cpfBanco);
+                System.out.println(usuarioBanco);
                 System.out.println(senhaBanco);
 
-                if(senhaDigitado.equals(senhaBanco) && cpfDigitado.equals(cpfBanco)){
+                if(senhaDigitado.equals(senhaBanco) && usuarioDigitado.equals(usuarioBanco)){
                     Home home = new Home();
                     home.setVisible(true);
                     dispose();
                 }     
-                else{
-                    JOptionPane.showMessageDialog(null, "CPF ou senha incorretos");
+
+                else {
+                    JOptionPane.showMessageDialog(null, "Usuario ou senha incorretos");
                 }
             }    
 
@@ -45,7 +52,7 @@ public class Login extends javax.swing.JFrame {
             this.conectar.fechaBanco();  
         }  
     }
-
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -57,7 +64,7 @@ public class Login extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        campoCpfLogin = new javax.swing.JTextField();
+        campoUsuarioLogin = new javax.swing.JTextField();
         campoSenhaLogin = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -106,11 +113,11 @@ public class Login extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(16, 97, 218), 3));
         jPanel3.setForeground(new java.awt.Color(16, 97, 218));
 
-        campoCpfLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        campoCpfLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        campoCpfLogin.addFocusListener(new java.awt.event.FocusAdapter() {
+        campoUsuarioLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        campoUsuarioLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        campoUsuarioLogin.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                campoCpfLoginFocusGained(evt);
+                campoUsuarioLoginFocusGained(evt);
             }
         });
 
@@ -176,7 +183,7 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(jLabel7))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(campoCpfLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(campoUsuarioLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                             .addComponent(jLabel3)
                             .addComponent(campoSenhaLogin))
                         .addGap(82, 82, 82))
@@ -204,7 +211,7 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campoCpfLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoUsuarioLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6))
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
@@ -275,9 +282,9 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void campoCpfLoginFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoCpfLoginFocusGained
+    private void campoUsuarioLoginFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoUsuarioLoginFocusGained
 
-    }//GEN-LAST:event_campoCpfLoginFocusGained
+    }//GEN-LAST:event_campoUsuarioLoginFocusGained
 
     private void campoSenhaLoginFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoSenhaLoginFocusGained
 
@@ -335,8 +342,8 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel TDcentral;
     private javax.swing.JButton cadastroButton;
-    private javax.swing.JTextField campoCpfLogin;
     private javax.swing.JPasswordField campoSenhaLogin;
+    private javax.swing.JTextField campoUsuarioLogin;
     private javax.swing.JLabel exitBT;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
