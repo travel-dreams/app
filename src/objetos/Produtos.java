@@ -82,6 +82,15 @@ public class Produtos {
          System.out.print(retornoCarrinho);
         return retornoCarrinho;
     }
+
+    public MySql getConectar() {
+        return conectar;
+    }
+
+    public void setConectar(MySql conectar) {
+        this.conectar = conectar;
+    }
  
+    
 }
 

@@ -479,13 +479,8 @@ public class Cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_backBTMouseClicked
 
     private void FinalCadastroBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalCadastroBTActionPerformed
-        if(campoSenha.equals(campoSenha2)){
-                    cadastraCliente(novoCliente);
-                }     
 
-                else {
-                    JOptionPane.showMessageDialog(null, "As senhas não correspondem");
-                }
+        cadastraCliente(novoCliente);
     }//GEN-LAST:event_FinalCadastroBTActionPerformed
 
     private void campoCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCpfActionPerformed

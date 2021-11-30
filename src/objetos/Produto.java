@@ -3,7 +3,6 @@ package objetos;
 
 public class Produto {
     //atributos
-    private String id = "";
     private String id_categoria = "";
     private String nome = "";
     private String imagem = "";
@@ -11,13 +10,6 @@ public class Produto {
     private String preco = "";
     private String preco_promocional = "";
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
     
      public String getId_Categoria() {
         return id_categoria;
@@ -69,7 +61,6 @@ public class Produto {
 
     
     public void limpaProduto(){
-    id = "";
     id_categoria = "";
     nome = "";
     imagem = "";

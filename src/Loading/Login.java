@@ -24,7 +24,7 @@ public class Login extends javax.swing.JFrame {
             } else {
                 
         try {
-            this.conectar.executarSQL("select usuario, senha from usuario where cpf = '" + usuarioDigitado + "'");
+            this.conectar.executarSQL("select usuario, senha from usuario where usuario = '" + usuarioDigitado + "'");
             
             while(this.conectar.getResultSet().next()){    
                 String usuarioBanco = this.conectar.getResultSet().getString(1);
