@@ -97,7 +97,39 @@ public class MySql {
         }
     }
     
+     public int cadastraLogin(String SQL){
+        int status = 0;
+        try {
+            //createStatement de con para criar o Statement
+            this.setStatement(getConn().createStatement());            
+
+            // Definido o Statement, executamos a query no banco de dados
+            this.getStatement().executeUpdate(SQL);            
+        
+            return status;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return status;
+        }
+    }
+    
     public int cadastraCarrinho(String SQL){
+        int status = 0;
+        try {
+            //createStatement de con para criar o Statement
+            this.setStatement(getConn().createStatement());            
+
+            // Definido o Statement, executamos a query no banco de dados
+            this.getStatement().executeUpdate(SQL);            
+        
+            return status;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return status;
+        }
+    }
+    
+    public int atualizaUsuario(String SQL){
         int status = 0;
         try {
             //createStatement de con para criar o Statement

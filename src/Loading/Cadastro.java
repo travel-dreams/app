@@ -25,6 +25,8 @@ public class Cadastro extends javax.swing.JFrame {
         novoCliente.setEmail(campoEmail.getText());
         novoCliente.setSenha(campoSenha.getText());
         
+        if(campoSenha.equals(campoSenha2)){
+        
         try {
                         
             this.conectar.cadastraUsuario("INSERT INTO usuario ("
@@ -53,7 +55,10 @@ public class Cadastro extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso");
             //novoCliente.limpaCliente();
             limparCamposCadastro();
-        }    
+        }
+        }else{
+            JOptionPane.showMessageDialog(null, "Digite duas senhas iguais!");
+        }
         
     }
     

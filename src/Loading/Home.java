@@ -52,6 +52,11 @@ public class Home extends javax.swing.JFrame {
         });
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Loading/imgs/account_circle.png"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -266,6 +271,12 @@ public class Home extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_goToCartMouseClicked
 
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        Perfil perfil = new Perfil();
+        perfil.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel4MouseClicked
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -274,7 +285,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel goToCart;
     private javax.swing.JLabel goToHotel;

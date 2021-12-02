@@ -24,20 +24,23 @@ public class Login extends javax.swing.JFrame {
             } else {
                 
         try {
-            this.conectar.executarSQL("select usuario, senha from usuario where usuario = '" + usuarioDigitado + "'");
+            this.conectar.executarSQL("select usuario, senha, cpf from usuario where usuario = '" + usuarioDigitado + "'");
             
             while(this.conectar.getResultSet().next()){    
                 String usuarioBanco = this.conectar.getResultSet().getString(1);
                 String senhaBanco = this.conectar.getResultSet().getString(2);
+                String cpfBanco = this.conectar.getResultSet().getString(3);
                 System.out.println(usuarioBanco);
                 System.out.println(senhaBanco);
 
                 if(senhaDigitado.equals(senhaBanco) && usuarioDigitado.equals(usuarioBanco)){
+                    this.conectar.cadastraLogin("TRUNCATE TABLE usuarioLogado ");
+                    this.conectar.cadastraLogin("INSERT INTO usuarioLogado values (" + cpfBanco + ")");
                     Home home = new Home();
                     home.setVisible(true);
                     dispose();
+                    break;
                 }     
-
                 else {
                     JOptionPane.showMessageDialog(null, "Usuario ou senha incorretos");
                 }
